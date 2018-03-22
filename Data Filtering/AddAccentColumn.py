@@ -76,10 +76,8 @@ for person in list(data):
     elif "synthesized" in person[NAME_COL]:
         count += 1
         data.remove(person)
-        print(person)
     elif person[NATIVELANG_COL] != 'english' and person[ONSET_COL] < 5 and person[LENGTH_COL] > 5 and person[AGE_COL] < 40:
         count += 1
-        print(person)
         data.remove(person)
 
 #Check everything
@@ -170,7 +168,6 @@ for person in data:
 
 # Convert back to a DataFrame
 df = pd.DataFrame.from_records(data, columns=labels)
-#print(df)
 
 df.to_csv("speakers_all_new.csv", index=False)
 
@@ -191,22 +188,5 @@ Tabdf.sort_values(by='number', inplace=True, ascending=False)
 
 #print(Tabdf)
 
-# result = df.to_string(index=False, header=False)
+# result = Tabdf.to_string(index=False, header=False)
 # print(result)
-
-
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
-#
