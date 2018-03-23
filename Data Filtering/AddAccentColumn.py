@@ -14,11 +14,11 @@ RegularEnglish = ['ontario', 'saskatchewan', 'alberta', 'british columbia', 'man
 Arabic = ['egypt', 'saudi arabia', 'lebanon', 'morocco', 'iraq', 'yemen', 'bahrain', 'libya', 'kuwait',
           'united arab emirates', 'qatar', 'tunisia', 'algeria', 'jordan', 'oman']
 
-EastAsain = ['china', 'tawain', 'singapore', 'japan', 'korea', 'thailand', 'vietnam']
+EastAsain = ['china', 'tawain', 'singapore', 'japan', 'korea', 'thailand', 'vietnam', 'taiwan']
 
 French = ['france'] #include french as native language
 
-British = ['england', 'wales']
+British = ['england', 'wales', 'uk']
 
 Irish = ['ireland']
 
@@ -33,13 +33,13 @@ Indian = ['india']
 
 Russian = ['ukraine', 'russia', 'belarus', 'uzbekistan', 'moldova', 'estonia', 'latvia'] #include russian as native language
 
-Slavic = ['serbia', 'macedonia', 'croatia', 'slovakia']
+Slavic = ['serbia', 'macedonia', 'croatia', 'slovakia', 'bosnia', 'herzegovina', 'bulgaria']
 
 German = ['germany'] #include german as native language
 
 Italian = ['italy']
 
-Nordic = ['swedish', 'finnish', 'norwegian', 'icelandic', 'danish']
+Nordic = ['sweden', 'finland', 'norway', 'iceland', 'denmark']
 
 WestAfrican = ['nigeria', 'niger', 'ghana', 'togo', 'benin', 'liberia', 'sierra leone', 'guinea', 'mali', 'mauritania',
                'cameroon', 'chad']
@@ -186,7 +186,7 @@ Tabdf.columns = ['accent','number']
 #Sort descending by nunmber
 Tabdf.sort_values(by='number', inplace=True, ascending=False)
 
-#print(Tabdf)
+print(Tabdf)
 
 # result = Tabdf.to_string(index=False, header=False)
 # print(result)
