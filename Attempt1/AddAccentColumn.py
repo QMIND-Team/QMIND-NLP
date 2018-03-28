@@ -9,6 +9,7 @@ RegularEnglish = ['ontario', 'saskatchewan', 'alberta', 'british columbia', 'man
                   'prince edward island', 'california', 'pennsylvania', 'hawaii', 'michigan', 'illinois',
                   'arizona', 'colorado', 'alaska', 'minnesota', 'washington', 'missouri', 'oregon', 'wisconsin', 'indiana',
                   'connecticut', 'utah', 'new mexico', 'montana', 'maine', 'nevada', 'iowa', 'kansas', 'wyoming', 'nebraska',
+                  'new hampshire', 'vermont', 'delaware', 'south dakota', 'north dakota', 'idaho'] #include english as native language
 
 Arabic = ['egypt', 'saudi arabia', 'lebanon', 'morocco', 'iraq', 'yemen', 'bahrain', 'libya', 'kuwait',
           'united arab emirates', 'qatar', 'tunisia', 'algeria', 'jordan', 'oman']
