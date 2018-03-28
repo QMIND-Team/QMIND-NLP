@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/scarere/Documents/GitHub/QMIND-NLP/AccentDetector/accent-lstm"
+all_model_checkpoint_paths: "/Users/scarere/Documents/GitHub/QMIND-NLP/AccentDetector/accent-lstm"

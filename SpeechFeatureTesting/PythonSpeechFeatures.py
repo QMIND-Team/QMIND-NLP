@@ -3,9 +3,16 @@ import scipy.io.wavfile as wav
 import numpy as np
 import csv
 
-(sampleRate, signal) = wav.read("WavFiles/english44.wav")
-mfccTensor = mfcc(signal, samplerate = sampleRate, winlen=0.020, winstep=0.01)
+(sampleRate, signal) = wav.read("WavFiles/english17.wav")
+
+#newsignal = []
+#for point in list(signal):
+   # newsignal.append(point[0])
 
 
-#np.savetxt("mfccFile.csv", mfccTensor, delimiter=",")
-np.savetxt("signal.csv", signal, delimiter=",")
+
+mfccTensor = mfcc(signal, samplerate = sampleRate, nfft=2048)
+
+print(type(mfccTensor))
+np.savetxt("mfccFile.csv", mfccTensor, delimiter=",")
+#np.savetxt("newsignal.csv", newsignal, delimiter=",")
