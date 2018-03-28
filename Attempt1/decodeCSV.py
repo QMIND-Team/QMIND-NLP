@@ -29,7 +29,7 @@ testY = testY.values.tolist()
 
 print("Processing files")
 
-#Through some numpy magic, grab only the first 100 time steps from each person
+#Through some numpy magic, grab only the first however many time steps from each person
 testX = np.array(collapsedTestX)
 midTestX = testX[:,0:NUM_STEPS*13].tolist()
 

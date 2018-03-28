@@ -3,6 +3,7 @@ from python_speech_features import mfcc
 import scipy.io.wavfile as wav
 import tflearn as tf
 import time
+import numpy as np
 
 dataraw = pd.read_csv("speakers_all_new.csv", sep=',')
 labels = dataraw.columns
