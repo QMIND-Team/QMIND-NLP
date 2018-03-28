@@ -5,7 +5,7 @@ import math
 import os
 import tflearn
 
-NUM_STEPS = 6000
+NUM_STEPS = 100
 
 #Import the TestX from the csv.  It's a list of lists.
 collapsedTestX = pd.read_csv("TestData/testX.csv", sep=',', header=None)
