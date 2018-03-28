@@ -656,7 +656,7 @@ age,age_onset,birthplace,filename,native_language,sex,speakerid,country,file_mis
 39,6,"suva, fiji",fijian2,fijian,female,656,fiji,FALSE,academic,"fiji,usa",39
 48,6,"suva, fiji",fijian3,fijian,female,657,fiji,FALSE,academic,"fiji,usa,newzealand",48
 19,7,"montreal, quebec, canada",french16,french,female,658,canada,FALSE,academic,canada,19
-43,5,"vatukoula, fiji",rotuman1,rotuman,female,659,fiji,FALSE,"academicnaturalistic","newzealand,fiji,usa",43
+43,5,"vatukoula, fiji",rotuman1,rotuman,female,659,fiji,FALSE,academic,"newzealand,fiji,usa",43
 52,7,"rotuma, rotuma, fiji",rotuman2,rotuman,male,660,fiji,FALSE,academic,"newzealand,fiji,usa",52
 44,10,"split, croatia",croatian3,croatian,female,661,croatia,FALSE,academic,"newzealand,usa",0
 22,0,"iowa city, iowa, usa",english197,english,male,662,usa,FALSE,naturalistic,usa,22

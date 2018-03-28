@@ -9,7 +9,6 @@ RegularEnglish = ['ontario', 'saskatchewan', 'alberta', 'british columbia', 'man
                   'prince edward island', 'california', 'pennsylvania', 'hawaii', 'michigan', 'illinois',
                   'arizona', 'colorado', 'alaska', 'minnesota', 'washington', 'missouri', 'oregon', 'wisconsin', 'indiana',
                   'connecticut', 'utah', 'new mexico', 'montana', 'maine', 'nevada', 'iowa', 'kansas', 'wyoming', 'nebraska',
-                  'new hampshire', 'vermont', 'delaware', 'south dakota', 'north dakota', 'idaho'] #include english as native language
 
 Arabic = ['egypt', 'saudi arabia', 'lebanon', 'morocco', 'iraq', 'yemen', 'bahrain', 'libya', 'kuwait',
           'united arab emirates', 'qatar', 'tunisia', 'algeria', 'jordan', 'oman']
@@ -44,7 +43,7 @@ Nordic = ['sweden', 'finland', 'norway', 'iceland', 'denmark']
 WestAfrican = ['nigeria', 'niger', 'ghana', 'togo', 'benin', 'liberia', 'sierra leone', 'guinea', 'mali', 'mauritania',
                'cameroon', 'chad']
 
-# Read the data from the csv, and drop the unnecessary columns
+# Read the data from the csv
 dataraw = pd.read_csv("speakers_all.csv", sep=',')
 dataraw['Accent'] = ''
 
@@ -82,88 +81,88 @@ for person in list(data):
 
 #Check everything
 for person in data:
-    person[ACCENT_COL] = 'null'
+    person[ACCENT_COL] = 'rem'
     for place in Southern:
         if place in person[BIRTHPLACE_COL]:
-            person[ACCENT_COL] = 'southern'
+            person[ACCENT_COL] = 0
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
     for place in RegularEnglish:
         if place in person[BIRTHPLACE_COL] and 'english' in person[NATIVELANG_COL]:
-            person[ACCENT_COL] = 'american'
+            person[ACCENT_COL] = 1
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
     for place in Arabic:
         if place in person[BIRTHPLACE_COL]:
-            person[ACCENT_COL] = 'arabic'
+            person[ACCENT_COL] = 2
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
     for place in EastAsain:
         if place in person[BIRTHPLACE_COL]:
-            person[ACCENT_COL] = 'east asian'
+            person[ACCENT_COL] = 3
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
     if 'france' in person[BIRTHPLACE_COL] and 'french' in person[NATIVELANG_COL]:
-        person[ACCENT_COL] = 'french'
+        person[ACCENT_COL] = 4
         continue
     #Keep australian before british.  New South Wales, Australia
     if 'australia' in person[BIRTHPLACE_COL]:
-        person[ACCENT_COL] = 'australian'
+        person[ACCENT_COL] = 5
         continue
     for place in British:
         if place in person[BIRTHPLACE_COL]:
-            person[ACCENT_COL] = 'british'
+            person[ACCENT_COL] = 6
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
     if 'ireland' in person[BIRTHPLACE_COL]:
-        person[ACCENT_COL] = 'irish'
+        person[ACCENT_COL] = 7
         continue
     if 'scotland' in person[BIRTHPLACE_COL]:
-        person[ACCENT_COL] = 'scottish'
+        person[ACCENT_COL] = 8
         continue
     for place in Latin:
         if place in person[BIRTHPLACE_COL]:
-            person[ACCENT_COL] = 'latin'
+            person[ACCENT_COL] = 9
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
     if 'india' in person[BIRTHPLACE_COL]:
-        person[ACCENT_COL] = 'indian'
+        person[ACCENT_COL] = 10
         continue
     for place in Russian:
         if place in person[BIRTHPLACE_COL] and 'russian' in person[NATIVELANG_COL]:
-            person[ACCENT_COL] = 'russian'
+            person[ACCENT_COL] = 11
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
     for place in Slavic:
         if place in person[BIRTHPLACE_COL]:
-            person[ACCENT_COL] = 'slavic'
+            person[ACCENT_COL] = 12
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
     if 'germany' in person[BIRTHPLACE_COL] and 'german' in person[NATIVELANG_COL]:
-        person[ACCENT_COL] = 'german'
+        person[ACCENT_COL] = 13
         continue
     if 'italy' in person[BIRTHPLACE_COL]:
-        person[ACCENT_COL] = 'italian'
+        person[ACCENT_COL] = 14
         continue
     for place in Nordic:
         if place in person[BIRTHPLACE_COL]:
-            person[ACCENT_COL] = 'nordic'
+            person[ACCENT_COL] = 15
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
     for place in WestAfrican:
         if place in person[BIRTHPLACE_COL]:
-            person[ACCENT_COL] = 'west african'
+            person[ACCENT_COL] = 16
             break
-    if person[ACCENT_COL] != 'null':
+    if person[ACCENT_COL] != 'rem':
         continue
 
 # Convert back to a DataFrame
