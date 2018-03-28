@@ -1,11 +1,15 @@
-#Read from the csvs
+print("Importing Modules")
+
 import pandas as pd
 import numpy as np
 import math
 import os
 import tflearn
+import gc
 
-NUM_STEPS = 100
+NUM_STEPS = 1000
+
+print("Loading from csv")
 
 #Import the TestX from the csv.  It's a list of lists.
 collapsedTestX = pd.read_csv("TestData/testX.csv", sep=',', header=None)
@@ -23,6 +27,8 @@ trainY = trainY.values.tolist()
 testY = pd.read_csv("TestData/testY.csv", sep=',', header=None)
 testY = testY.values.tolist()
 
+print("Processing files")
+
 #Through some numpy magic, grab only the first 100 time steps from each person
 testX = np.array(collapsedTestX)
 midTestX = testX[:,0:NUM_STEPS*13].tolist()
@@ -34,6 +40,8 @@ midTrainX = trainX[:,0:NUM_STEPS*13].tolist()
 
 del collapsedTestX
 del collapsedTrainX
+
+gc.collect()
 
 #Split the file back into the time steps.  Each time step is 13 point long
 testX = []
@@ -61,11 +69,13 @@ for person in midTrainX:
 del midTestX
 del midTrainX
 
+gc.collect()
 
 #gets rid of some stupid warning about CPU extensions
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 #network building
+print("Building Network")
 
 net = tflearn.input_data([None, NUM_STEPS, 13])
 
