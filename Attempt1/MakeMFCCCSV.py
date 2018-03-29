@@ -31,10 +31,9 @@ t = time.time()
 count = 0
 
 for person in data:
-    if (not person[ACCENT_COL] == 'rem'):
         (sampleRate, signal) = wav.read("WavFiles/" + person[NAME_COL] + ".wav")
         mfccTensor = mfcc(signal, samplerate = sampleRate, nfft=2048)
-        fullIn.append([mfccTensor, person[ACCENT_COL]])
+        fullIn.append([mfccTensor, person[SEX_COL]])
         count +=1
         print(count)
 
@@ -48,7 +47,7 @@ for thing in trainIn:
     trainX.append(thing[0])
     trainY.append(thing[1])
 
-trainY = tf.data_utils.to_categorical(list(trainY), 17)
+trainY = tf.data_utils.to_categorical(list(trainY), 2)
 
 testX = []
 testY = []
@@ -56,7 +55,7 @@ for thing in testIn:
     testX.append(thing[0])
     testY.append(thing[1])
 
-testY = tf.data_utils.to_categorical(list(testY), 17)
+testY = tf.data_utils.to_categorical(list(testY), 2)
 
 elapsed = time.time() - t
 

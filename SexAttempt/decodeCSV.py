@@ -7,7 +7,7 @@ import os
 import tflearn
 import gc
 
-NUM_STEPS = 1000
+NUM_STEPS = 200
 
 print("Loading from csv")
 
@@ -87,6 +87,6 @@ net = tflearn.regression(net, optimizer='adam', learning_rate =0.001, loss='cate
 
 model = tflearn.DNN(net)
 
-model.fit(trainX, trainY, validation_set=(testX, testY), show_metric=True, batch_size=1)
+model.fit(trainX, trainY, validation_set=(testX, testY), show_metric=True)
 
-model.save('accent-lstm')
+model.save('gender-lstm')
