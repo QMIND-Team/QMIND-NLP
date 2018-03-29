@@ -31,8 +31,7 @@ PERSON_NUM = 300
 
 #Pick a valid person
 P_NUM_ORIG = PERSON_NUM
-while data[PERSON_NUM][ACCENT_COL] == 'rem':
-    PERSON_NUM += 1
+
 
 #Set the person
 person = data[PERSON_NUM]
@@ -61,7 +60,7 @@ net = tflearn.regression(net, optimizer='adam', learning_rate =0.001, loss='cate
 model = tflearn.DNN(net)
 
 #Load previously trained data
-model.load('accent-lstm')
+model.load('gender-lstm')
 
 #Some instructinos
 print()

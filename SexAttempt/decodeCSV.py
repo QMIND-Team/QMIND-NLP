@@ -89,4 +89,4 @@ model = tflearn.DNN(net)
 
 model.fit(trainX, trainY, validation_set=(testX, testY), show_metric=True)
 
-model.save('gender-lstm')
+model.save('gender-lstm.ts200')

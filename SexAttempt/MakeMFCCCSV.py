@@ -5,7 +5,7 @@ import tflearn as tf
 import time
 import numpy as np
 
-dataraw = pd.read_csv("speakers_all_new.csv", sep=',')
+dataraw = pd.read_csv("WavFiles/speakers_all_new.csv", sep=',')
 labels = dataraw.columns
 data = dataraw.values.tolist()
 
@@ -31,8 +31,9 @@ t = time.time()
 count = 0
 
 for person in data:
+    if (not (person[ACCENT_COL] == 'rem')):
         (sampleRate, signal) = wav.read("WavFiles/" + person[NAME_COL] + ".wav")
-        mfccTensor = mfcc(signal, samplerate = sampleRate, nfft=2048)
+        mfccTensor = mfcc(signal, samplerate = sampleRate, nfft=2048, winlen=0.01, winstep=0.01)
         fullIn.append([mfccTensor, person[SEX_COL]])
         count +=1
         print(count)
