@@ -1792,7 +1792,7 @@ age,age_onset,birthplace,filename,native_language,sex,speakerid,country,file_mis
 20.0,8.0,"farjestaden, sweden",swedish17,swedish,1,1861,sweden,False,naturalistic,usa,0.3,15
 55.0,14.0,"pusan, south korea",korean39,korean,0,1862,south korea,False,academic,usa,41.0,3
 46.0,5.0,"accra, ghana",fanti3,fanti,1,1863,ghana,False,academic,usa,21.0,16
-65.0,35.0,"taipei, taiwan",taiwanese7,taiwanese,famale,1864,taiwan,False,academic,usa,20.0,3
+65.0,35.0,"taipei, taiwan",taiwanese7,taiwanese,1,1864,taiwan,False,academic,usa,20.0,3
 24.0,20.0,"katmandu, nepal",nepali11,nepali,1,1865,nepal,False,academic,usa,1.0,rem
 28.0,9.0,"paide, estonia",estonian4,estonian,1,1867,estonia,False,academic,"uk,usa",6.0,rem
 56.0,32.0,"kabul, afghanistan",dari5,dari,1,1868,afghanistan,False,naturalistic,usa,24.0,rem

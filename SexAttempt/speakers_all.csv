@@ -1859,7 +1859,7 @@ age,age_onset,birthplace,filename,native_language,sex,speakerid,country,file_mis
 20,8,"farjestaden, sweden",swedish17,swedish,female,1861,sweden,FALSE,naturalistic,usa,0.3
 55,14,"pusan, south korea",korean39,korean,male,1862,south korea,FALSE,academic,usa,41
 46,5,"accra, ghana",fanti3,fanti,female,1863,ghana,FALSE,academic,usa,21
-65,35,"taipei, taiwan",taiwanese7,taiwanese,famale,1864,taiwan,FALSE,academic,usa,20
+65,35,"taipei, taiwan",taiwanese7,taiwanese,female,1864,taiwan,FALSE,academic,usa,20
 24,20,"katmandu, nepal",nepali11,nepali,female,1865,nepal,FALSE,academic,usa,1
 18,16,"ouanaminthe, haiti",haitian,haitian,female,1866,haiti,TRUE,naturalistic,usa,1
 28,9,"paide, estonia",estonian4,estonian,female,1867,estonia,FALSE,academic,"uk,usa",6
