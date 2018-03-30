@@ -48,7 +48,7 @@ for thing in trainIn:
     trainX.append(thing[0])
     trainY.append(thing[1])
 
-trainY = tf.data_utils.to_categorical(list(trainY), 17)
+trainY = tf.data_utils.to_categorical(list(trainY), 2)
 
 testX = []
 testY = []
@@ -56,7 +56,7 @@ for thing in testIn:
     testX.append(thing[0])
     testY.append(thing[1])
 
-testY = tf.data_utils.to_categorical(list(testY), 17)
+testY = tf.data_utils.to_categorical(list(testY), 2)
 
 elapsed = time.time() - t
 

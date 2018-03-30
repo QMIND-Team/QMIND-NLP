@@ -83,6 +83,10 @@ for person in list(data):
 #Check everything
 for person in data:
     person[ACCENT_COL] = 'rem'
+    if person[SEX_COL] == 'male':
+        person[SEX_COL] = 0
+    if person[SEX_COL] == 'female':
+        person[SEX_COL] = 1
     for place in Southern:
         if place in person[BIRTHPLACE_COL]:
             person[ACCENT_COL] = 0
@@ -165,7 +169,6 @@ for person in data:
             break
     if person[ACCENT_COL] != 'rem':
         continue
-
 # Convert back to a DataFrame
 df = pd.DataFrame.from_records(data, columns=labels)
 
