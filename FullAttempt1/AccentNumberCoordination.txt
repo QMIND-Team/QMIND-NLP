@@ -1,0 +1,17 @@
+0, southern
+1, american
+2, arabic
+3, east asian
+4, french
+5, australian
+6, british
+7, irish
+8, scottish
+9, latin
+10, indian
+11, russian
+12, slavic
+13, german
+14, italian
+15, nordic
+16, west african

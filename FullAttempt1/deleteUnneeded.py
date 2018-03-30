@@ -25,7 +25,7 @@ count = 0
 for person in data:
     if(person[ACCENT_COL] == 'rem'):
         try:
-            os.remove(person[NAME_COL] + ".wav")
+            os.remove("WavFiles/" + person[NAME_COL] + ".wav")
         except:
             count += 1
             print(person[NAME_COL])
