@@ -60,8 +60,7 @@ count = 0
 fullIn = []
 for person in data:
     if (not person[ACCENT_COL] == 'rem'):
-        (sampleRate, signal) = wav.read("WavFiles/" + person[NAME_COL] + ".wav")
-        mfccTensor = mfcc(signal, samplerate = sampleRate, nfft=2048)
+
         fullIn.append([mfccTensor, person[ACCENT_COL]])
         count +=1
         print(count)
