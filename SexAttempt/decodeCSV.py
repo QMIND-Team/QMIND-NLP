@@ -7,7 +7,7 @@ import os
 import tflearn
 import gc
 
-NUM_STEPS = 200
+NUM_STEPS = 2000
 
 print("Loading from csv")
 
@@ -81,7 +81,7 @@ net = tflearn.input_data([None, NUM_STEPS, 13])
 
 net = tflearn.lstm(net, 128, dropout=0.8)
 
-net = tflearn.fully_connected(net, 17, activation='softmax')
+net = tflearn.fully_connected(net, 2, activation='softmax')
 
 net = tflearn.regression(net, optimizer='adam', learning_rate =0.001, loss='categorical_crossentropy')
 
