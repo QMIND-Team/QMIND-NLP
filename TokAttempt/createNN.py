@@ -4,7 +4,7 @@ import os
 import tflearn
 import h5py
 
-NUM_STEPS = 1650
+NUM_STEPS = 200
 
 h5f = h5py.File('data.h5', 'r')
 trainX = h5f['trainX']

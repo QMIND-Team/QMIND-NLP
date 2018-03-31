@@ -7,7 +7,7 @@ import os
 import tflearn
 import gc
 
-NUM_STEPS = 2000
+NUM_STEPS = 200
 
 print("Loading from csv")
 
