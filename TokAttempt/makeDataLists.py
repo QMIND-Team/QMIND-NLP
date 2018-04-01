@@ -60,9 +60,9 @@ count = 0
 fullIn = []
 for person in data:
     if (not person[ACCENT_COL] == 'rem'):
-
+        mfccTensor = pd.read_csv(person[NAME_COL] + "." + str(count))
         fullIn.append([mfccTensor, person[ACCENT_COL]])
-        count +=1
+        count += 1
         print(count)
 
 np.random.shuffle(fullIn)
