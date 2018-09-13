@@ -30,4 +30,4 @@ model = tflearn.DNN(net)
 
 model.fit(trainX, trainY, validation_set=(testX, testY), show_metric=True, batch_size=128, shuffle=True)
 
-model.save('accent-lstm')
+model.save('accent-lstmClone')

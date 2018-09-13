@@ -18,7 +18,7 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 #network building
 print("Building Network")
 
-net = tflearn.input_data([None, NUM_STEPS, 13])
+net = tflearn.input_data([None, NUM_STEPS, 13], shuffle=true)
 
 net = tflearn.lstm(net, 128, dropout=0.8)
 
